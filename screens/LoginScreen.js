@@ -21,7 +21,7 @@ export default function LoginScreen() {
         <Animated.Image entering={FadeInUp.delay(400).randomDelay()
 .duration(1000).springify().damping(6)} className="h-[80] w-[80] rounded-full mt-40 transform -rotate-12" source={require('../assets/images/selfie1.png')} />
         <Animated.Image entering={FadeInUp.delay(500).randomDelay()
-.duration(1000).springify().damping(6)} className="h-[60] w-[60] rounded-full mt-20 transform rotate-12" source={require('../assets/images/selfie1.png')} />
+.duration(1000).springify().damping(6)} className="h-[60] w-[60] rounded-full mt-20 transform -rotate-45" source={require('../assets/images/selfie1.png')} />
       </View>
 
       {/* title and form */}
