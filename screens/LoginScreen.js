@@ -3,9 +3,11 @@ import React from 'react'
 import { StatusBar } from 'expo-status-bar'
 import Animated,{ Easing, FadeIn, FadeInDown, FadeInUp, FadeOut } from 'react-native-reanimated';
 import Profile from './Profile';
+import { useNavigation } from '@react-navigation/native';
 
 
-export default function LoginScreen({navigation}) {
+export default function LoginScreen() {
+  const navigation = useNavigation();
   return (
     <View className="bg-white w-full h-full">
       <StatusBar style='light' />
@@ -43,13 +45,13 @@ export default function LoginScreen({navigation}) {
             <TextInput placeholder='Password' placeholderTextColor={'gray'} secureTextEntry/>
           </Animated.View>
           <Animated.View entering={FadeInDown.delay(400).duration(1000).springify()} className="w-full">
-            <TouchableOpacity className="w-full bg-sky-400 p-3 rounded-2xl mb-3" onPress={() => navigation.navigate('profile')}>
+            <TouchableOpacity className="w-full bg-sky-400 p-3 rounded-2xl mb-3" onPress={() => navigation.push('profile')}>
               <Text className="text-xl font-bold text-white text-center">Login</Text>
             </TouchableOpacity>
           </Animated.View>
           <Animated.View entering={FadeInDown.delay(600).duration(1000).springify()} className="flex-row justify-center">
             <Text>Don't have an account? </Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.push('signup')}>
               <Text className="text-sky-600">SignUp</Text>
             </TouchableOpacity>
           </Animated.View>
