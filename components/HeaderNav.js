@@ -2,7 +2,7 @@ import { View, Text ,TextInput, StyleSheet} from 'react-native'
 import React from 'react'
 import { AntDesign } from '@expo/vector-icons';
 
-export default function searchBar() {
+export default function HeaderNav() {
   return (
     <View style={styles.container}>
 
