@@ -4,6 +4,7 @@ import { StatusBar } from 'expo-status-bar'
 import Animated,{ Easing, FadeIn, FadeInDown, FadeInUp, FadeOut } from 'react-native-reanimated';
 import Profile from './Profile';
 import { useNavigation } from '@react-navigation/native';
+import BottomNav from '../components/BottomNav';
 
 
 export default function LoginScreen() {
@@ -45,7 +46,7 @@ export default function LoginScreen() {
             <TextInput placeholder='Password' placeholderTextColor={'gray'} secureTextEntry/>
           </Animated.View>
           <Animated.View entering={FadeInDown.delay(400).duration(1000).springify()} className="w-full">
-            <TouchableOpacity className="w-full bg-sky-400 p-3 rounded-2xl mb-3" onPress={() => navigation.push('profile')}>
+            <TouchableOpacity className="w-full bg-sky-400 p-3 rounded-2xl mb-3" onPress={() => navigation.push('bottom')}>
               <Text className="text-xl font-bold text-white text-center">Login</Text>
             </TouchableOpacity>
           </Animated.View>

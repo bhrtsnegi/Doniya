@@ -6,7 +6,7 @@ import Profile from './Profile';
 import { useNavigation } from '@react-navigation/native';
 
 
-export default function LoginScreen({navigate}) {
+export default function SignupScreen({navigate}) {
   const navigation = useNavigation();
   return (
     <View className="bg-white w-full h-full">
