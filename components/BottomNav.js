@@ -15,13 +15,12 @@ const Tab = createBottomTabNavigator();
 export default function BottomNav() {
   return (
     <Tab.Navigator initialRouteName='home'>
-            {/* <Tab.Screen name='home' component={HomeScreen}/> */}
             <Tab.Screen name="home" component={HomeScreen} 
             options={{  tabBarLabel:'Home',
             tabBarIcon : ({color})=> ( <Entypo name="home" size={24} color="black" />), headerShown:false}} />
             <Tab.Screen name="explore" component={ExploreScreen} 
             options={{ tabBarLabel: 'Explore', 
-            tabBarIcon : ({color}) => ( <MaterialIcons name="explore" size={24} color="black" />), headerShown:false}}/>
+            tabBarIcon : ({color}) => ( <MaterialIcons name="explore" size={24} color="black" />),headerShown:false}}/>
             <Tab.Screen name="notification" component={NotificationScreen} 
             options={{tabBarLabel: 'Notificaiton', 
             tabBarIcon: ({color}) => ( <Ionicons name="notifications" size={24} color="black" />), headerShown:false}}/>
